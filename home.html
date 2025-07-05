@@ -3,81 +3,54 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>HMTunnel - Home</title>
+  <title>HMTunnel - Dashboard</title>
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
 </head>
 <body>
-  <!-- Meniu lateral -->
-  <div class="sidebar">
-    <div class="logo">
-      <h2>HMTunnel</h2>
-    </div>
-
-    <!-- Linkuri meniuri -->
-    <a href="home.html" class="active" data-i18n="home">Acasă</a>
-    <a href="dispozitive.html" data-i18n="dispozitive">Dispozitive</a>
-    <a href="clienti.html" data-i18n="clienti">Clienți</a>
-    <a href="servere.html" data-i18n="servere">Servere</a>
-    <a href="aplicatie.html" data-i18n="aplicatie">Aplicație</a>
-    <a href="configurari.html" data-i18n="configurari">Configurări</a>
-    <a href="profil.html" data-i18n="profil">Profil</a>
-    <a href="administrare.html" data-i18n="administrare">Administrare</a>
-    <a href="delogare.html" data-i18n="delogare">Delogare</a>
-
-    <!-- Selector limbă și logout -->
-    <div style="margin-top: auto;">
-      <select class="language-select" onchange="changeLanguage(this.value)">
-        <option value="ro">Română</option>
-        <option value="en">English</option>
-      </select>
-      <button class="logout-button" onclick="logout()">Delogare</button>
-    </div>
-  </div>
-
-  <!-- Conținut principal -->
-  <div class="main-content">
-    <!-- User sus -->
-    <div class="topbar">
-      <div class="user-role">Bine ai venit, <strong>Admin</strong></div>
-    </div>
-
-    <!-- Secțiunea 1: Informații cont -->
-    <h3 class="section-title" data-i18n="informatii_cont">Informații cont</h3>
-    <div class="cards-container">
-      <div class="card">
-        <h3>📅 Data Creării</h3>
-        <p>10 Iulie 2025</p>
+  <aside class="sidebar">
+    <h2 class="logo">HMTunnel</h2>
+    <nav class="nav">
+      <a href="home.html" class="active">🏠 Acasă</a>
+      <a href="dispozitive.html">📱 Dispozitive</a>
+      <a href="clienti.html">👥 Clienți</a>
+      <a href="servere.html">🖥️ Servere</a>
+      <a href="aplicatie.html">📲 Aplicație</a>
+      <a href="configurari.html">⚙️ Configurări</a>
+      <a href="profil.html">👤 Profil</a>
+      <a href="administrare.html">🧩 Administrare</a>
+      <a href="delogare.html">🚪 Delogare</a>
+      <div class="bottom-controls">
+        <select class="language-select" onchange="changeLanguage(this.value)">
+          <option value="ro">Română</option>
+          <option value="en">English</option>
+        </select>
       </div>
-      <div class="card">
-        <h3>🔄 Ultima actualizare</h3>
-        <p>5 Iulie 2025</p>
-      </div>
-      <div class="card">
-        <h3>⏳ Expirare</h3>
-        <p>10 August 2025 (30 zile rămase)</p>
-      </div>
-    </div>
+    </nav>
+  </aside>
 
-    <!-- Secțiunea 2: Statistici -->
-    <h3 class="section-title" data-i18n="statistici">Statistici de sistem</h3>
-    <div class="cards-container">
-      <div class="card">
-        <h3>🗂️ Configurații</h3>
-        <p>15</p>
-      </div>
-      <div class="card">
-        <h3>📁 Categorii</h3>
-        <p>6</p>
-      </div>
-      <div class="card">
-        <h3>📱 Dispozitive conectate</h3>
-        <p>8</p>
-      </div>
-    </div>
-  </div>
+  <main class="content">
+    <header class="topbar">
+      <span class="user-label">Salut, Admin</span>
+    </header>
 
-  <!-- Hamburger pentru mobil -->
-  <div class="hamburger">&#9776;</div>
+    <section class="section">
+      <h2 class="section-title">📋 Informații cont</h2>
+      <div class="card-grid">
+        <div class="card"><h3>📅 Data Creării</h3><p>10 Iulie 2025</p></div>
+        <div class="card"><h3>🔄 Ultima Actualizare</h3><p>5 Iulie 2025</p></div>
+        <div class="card"><h3>⏳ Expirare</h3><p>10 August 2025 (30 zile)</p></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">📊 Statistici de sistem</h2>
+      <div class="card-grid">
+        <div class="card"><h3>🗂️ Configurații</h3><p>15</p></div>
+        <div class="card"><h3>📁 Categorii</h3><p>6</p></div>
+        <div class="card"><h3>📱 Dispozitive conectate</h3><p>8</p></div>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
