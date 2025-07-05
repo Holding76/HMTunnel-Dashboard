@@ -1,32 +1,108 @@
-/* Carduri cu gradient */
-.card {
-  background: linear-gradient(145deg, #1e1e1e, #2a2a2a);
-  padding: 20px;
-  border-radius: 20px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-  text-align: center;
-  transition: transform 0.2s ease-in-out;
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #121212;
+  color: #fff;
+  display: flex;
 }
+
+.sidebar {
+  width: 220px;
+  background-color: #1e1e1e;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #00bcd4;
+  margin-bottom: 30px;
+}
+
+.nav a {
+  color: #ccc;
+  text-decoration: none;
+  margin-bottom: 10px;
+  display: block;
+  padding: 8px 10px;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.nav a:hover,
+.nav a.active {
+  background-color: #00bcd4;
+  color: black;
+}
+
+.bottom-controls {
+  margin-top: auto;
+  padding-top: 20px;
+}
+
+.language-select {
+  width: 100%;
+  padding: 6px;
+  border-radius: 6px;
+  background-color: #2e2e2e;
+  color: white;
+  border: none;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.topbar {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+.user-label {
+  font-size: 16px;
+  color: #00bcd4;
+}
+
+.section {
+  margin-bottom: 40px;
+}
+
+.section-title {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: linear-gradient(145deg, #1f1f1f, #2c2c2c);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+  transition: transform 0.3s;
+}
+
 .card:hover {
   transform: translateY(-5px);
 }
 
-/* Culori text mai vii */
 .card h3 {
   color: #00bcd4;
-  font-size: 20px;
-}
-.card p {
-  color: #ccc;
-  font-size: 15px;
+  margin-bottom: 10px;
 }
 
-/* Selector limbă */
-.language-select {
-  background-color: #2e2e2e;
-  color: white;
-  border: 1px solid #555;
-  border-radius: 8px;
-  padding: 6px 10px;
+.card p {
+  color: #ddd;
   font-size: 14px;
 }
