@@ -1,1 +1,53 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #121212;
+  color: #ffffff;
+}
 
+.sidebar {
+  width: 220px;
+  background-color: #1e1e1e;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  padding-top: 20px;
+}
+
+.sidebar a {
+  display: block;
+  color: #ddd;
+  padding: 12px 20px;
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  background-color: #333;
+}
+
+.main-content {
+  margin-left: 220px;
+  padding: 20px;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1e1e1e;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.lang-switch button {
+  background: #333;
+  color: white;
+  border: none;
+  margin-left: 10px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
