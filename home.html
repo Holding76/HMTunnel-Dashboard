@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>HMTunnel - Home</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
 </head>
 <body>
   <!-- Meniu lateral -->
   <div class="sidebar">
-    <div class="logo"><h2>HMTunnel</h2></div>
+    <div class="logo">
+      <h2>HMTunnel</h2>
+    </div>
+
+    <!-- Linkuri meniuri -->
     <a href="home.html" class="active" data-i18n="home">Acasă</a>
     <a href="dispozitive.html" data-i18n="dispozitive">Dispozitive</a>
     <a href="clienti.html" data-i18n="clienti">Clienți</a>
@@ -20,39 +24,43 @@
     <a href="profil.html" data-i18n="profil">Profil</a>
     <a href="administrare.html" data-i18n="administrare">Administrare</a>
     <a href="delogare.html" data-i18n="delogare">Delogare</a>
+
+    <!-- Selector limbă și logout -->
+    <div style="margin-top: auto;">
+      <select class="language-select" onchange="changeLanguage(this.value)">
+        <option value="ro">Română</option>
+        <option value="en">English</option>
+      </select>
+      <button class="logout-button" onclick="logout()">Delogare</button>
+    </div>
   </div>
 
   <!-- Conținut principal -->
   <div class="main-content">
-    <!-- Bara de sus -->
+    <!-- User sus -->
     <div class="topbar">
-      <div class="user-role">Admin</div>
-      <div class="lang-switch">
-        <button onclick="changeLanguage('ro')">RO</button>
-        <button onclick="changeLanguage('en')">EN</button>
-        <button class="logout-button" onclick="logout()">Delogare</button>
-      </div>
+      <div class="user-role">Bine ai venit, <strong>Admin</strong></div>
     </div>
 
     <!-- Secțiunea 1: Informații cont -->
-    <h3 class="section-title">Informații cont</h3>
+    <h3 class="section-title" data-i18n="informatii_cont">Informații cont</h3>
     <div class="cards-container">
       <div class="card">
-        <h3>Data Creării</h3>
+        <h3>📅 Data Creării</h3>
         <p>10 Iulie 2025</p>
       </div>
       <div class="card">
-        <h3>Ultima actualizare</h3>
+        <h3>🔄 Ultima actualizare</h3>
         <p>5 Iulie 2025</p>
       </div>
       <div class="card">
-        <h3>Data Expirare</h3>
+        <h3>⏳ Expirare</h3>
         <p>10 August 2025 (30 zile rămase)</p>
       </div>
     </div>
 
-    <!-- Secțiunea 2: Statistici sistem -->
-    <h3 class="section-title">Statistici de sistem</h3>
+    <!-- Secțiunea 2: Statistici -->
+    <h3 class="section-title" data-i18n="statistici">Statistici de sistem</h3>
     <div class="cards-container">
       <div class="card">
         <h3>🗂️ Configurații</h3>
@@ -69,4 +77,7 @@
     </div>
   </div>
 
-  <!-- Buton hamburger pentru m
+  <!-- Hamburger pentru mobil -->
+  <div class="hamburger">&#9776;</div>
+</body>
+</html>
