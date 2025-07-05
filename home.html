@@ -1,20 +1,72 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HMTunnel - Home</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
 </head>
 <body>
+  <!-- Meniu lateral -->
   <div class="sidebar">
-    <a href="home.html" class="active">Acasă</a>
-    <a href="dispozitive.html">Dispozitive</a>
-    <!-- Adaugă și celelalte linkuri când vrei -->
+    <div class="logo"><h2>HMTunnel</h2></div>
+    <a href="home.html" class="active" data-i18n="home">Acasă</a>
+    <a href="dispozitive.html" data-i18n="dispozitive">Dispozitive</a>
+    <a href="clienti.html" data-i18n="clienti">Clienți</a>
+    <a href="servere.html" data-i18n="servere">Servere</a>
+    <a href="aplicatie.html" data-i18n="aplicatie">Aplicație</a>
+    <a href="configurari.html" data-i18n="configurari">Configurări</a>
+    <a href="profil.html" data-i18n="profil">Profil</a>
+    <a href="administrare.html" data-i18n="administrare">Administrare</a>
+    <a href="delogare.html" data-i18n="delogare">Delogare</a>
   </div>
+
+  <!-- Conținut principal -->
   <div class="main-content">
-    <h1>Pagina principală - Home</h1>
-    <p>Aici vor fi cardurile și informațiile despre cont.</p>
+    <!-- Bara de sus -->
+    <div class="topbar">
+      <div class="user-role">Admin</div>
+      <div class="lang-switch">
+        <button onclick="changeLanguage('ro')">RO</button>
+        <button onclick="changeLanguage('en')">EN</button>
+        <button class="logout-button" onclick="logout()">Delogare</button>
+      </div>
+    </div>
+
+    <!-- Secțiunea 1: Informații cont -->
+    <h3 class="section-title">Informații cont</h3>
+    <div class="cards-container">
+      <div class="card">
+        <h3>Data Creării</h3>
+        <p>10 Iulie 2025</p>
+      </div>
+      <div class="card">
+        <h3>Ultima actualizare</h3>
+        <p>5 Iulie 2025</p>
+      </div>
+      <div class="card">
+        <h3>Data Expirare</h3>
+        <p>10 August 2025 (30 zile rămase)</p>
+      </div>
+    </div>
+
+    <!-- Secțiunea 2: Statistici sistem -->
+    <h3 class="section-title">Statistici de sistem</h3>
+    <div class="cards-container">
+      <div class="card">
+        <h3>🗂️ Configurații</h3>
+        <p>15</p>
+      </div>
+      <div class="card">
+        <h3>📁 Categorii</h3>
+        <p>6</p>
+      </div>
+      <div class="card">
+        <h3>📱 Dispozitive conectate</h3>
+        <p>8</p>
+      </div>
+    </div>
   </div>
-</body>
-</html>
+
+  <!-- Buton hamburger pentru m
