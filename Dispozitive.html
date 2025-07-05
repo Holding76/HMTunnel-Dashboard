@@ -1,1 +1,40 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dispozitive</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="sidebar">
+    <a href="home.html" data-i18n="home">Acasă</a>
+    <a href="dispozitive.html" data-i18n="dispozitive">Dispozitive</a>
+    <a href="clienti.html" data-i18n="clienti">Clienți</a>
+    <a href="servere.html" data-i18n="servere">Servere</a>
+    <a href="aplicatie.html" data-i18n="aplicatie">Aplicație</a>
+    <a href="configurari.html" data-i18n="configurari">Configurări</a>
+    <a href="profil.html" data-i18n="profil">Profil</a>
+    <a href="administrare.html" data-i18n="administrare">Administrare</a>
+    <a href="delogare.html" data-i18n="delogare">Delogare</a>
+  </div>
 
+  <div class="main-content">
+    <div class="topbar">
+      <div id="user-display"><span data-i18n="welcome">Bun venit, </span> Admin</div>
+      <div class="lang-switch">
+        <button onclick="changeLanguage('ro')">RO</button>
+        <button onclick="changeLanguage('en')">EN</button>
+      </div>
+    </div>
+
+    <h1 data-i18n="dispozitive">Dispozitive</h1>
+    <p>Aici va fi funcționalitatea pentru adăugarea, vizualizarea și gestionarea dispozitivelor.</p>
+
+    <!-- Poți adăuga aici butonul: +Adăugare dispozitiv -->
+    <button style="margin-top: 20px;">+ Adaugă dispozitiv</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
