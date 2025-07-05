@@ -22,27 +22,34 @@
 
     .topbar {
       background-color: #1e1e1e;
-      padding: 10px 20px;
+      padding: 12px 20px;
       display: flex;
       justify-content: flex-end;
       align-items: center;
       border-bottom: 1px solid #333;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 50px;
+      z-index: 2;
     }
 
     .topbar span {
       color: #4fc3f7;
       font-weight: bold;
+      font-size: 18px;
     }
 
     .main-wrapper {
       display: flex;
       flex: 1;
+      margin-top: 50px;
     }
 
     .sidebar {
       width: 240px;
       background-color: #1e1e1e;
-      height: 100vh;
+      height: calc(100vh - 50px);
       padding: 20px;
       position: fixed;
       top: 50px;
@@ -75,52 +82,58 @@
       width: 100%;
     }
 
+    .main h1 {
+      margin-bottom: 20px;
+    }
+
     .home-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 30px;
-  margin-top: 20px;
-  max-width: 1080px;
-  margin-left: auto;
-  margin-right: auto;
-      @media (max-width: 768px) {
-  .home-cards {
-    grid-template-columns: 1fr;
-  }
-}
-
-}
-
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
     .card {
       background-color: #1e1e1e;
-      padding: 20px;
-      border-left: 4px solid #4fc3f7;
-      border-radius: 8px;
+      padding: 40px 30px;
+      border-left: 5px solid #4fc3f7;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
     }
 
     .card h3 {
-      margin-bottom: 10px;
-      font-size: 18px;
+      font-size: 22px;
+      margin-bottom: 15px;
       color: #4fc3f7;
+    }
+
+    .card p {
+      font-size: 18px;
+      color: #ddd;
     }
 
     /* Hamburger */
     .hamburger {
       display: none;
-      position: absolute;
-      top: 12px;
-      left: 12px;
+      position: fixed;
+      top: 10px;
+      left: 15px;
       font-size: 28px;
       cursor: pointer;
-      z-index: 10;
+      z-index: 3;
+      color: #4fc3f7;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 900px) {
+      .home-cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
       .sidebar {
         transform: translateX(-100%);
-        top: 50px;
       }
 
       .sidebar.active {
@@ -129,32 +142,39 @@
 
       .hamburger {
         display: block;
-        top: 12px;
-        left: 12px;
       }
 
       .main {
         margin-left: 0;
-        padding-top: 80px;
+        padding-top: 60px;
+      }
+
+      .home-cards {
+        grid-template-columns: 1fr;
       }
     }
   </style>
 </head>
 <body>
 
+  <!-- Bara de sus -->
   <div class="topbar">
-    <!-- Simulat: aici se va pune numele userului -->
-    <span>Admin</span> 
+    <span>Admin</span>
   </div>
 
+  <!-- Buton hamburger -->
   <div class="hamburger" onclick="toggleSidebar()">☰</div>
 
+  <!-- Wrapper general -->
   <div class="main-wrapper">
+    
+    <!-- Meniu lateral -->
     <div class="sidebar" id="sidebar">
       <h2>HMTunnel</h2>
       <a href="#">Home</a>
     </div>
 
+    <!-- Conținut principal -->
     <div class="main">
       <h1>Home</h1>
 
@@ -180,7 +200,7 @@
           <p>4</p>
         </div>
         <div class="card">
-          <h3>Număr Dispozitive Conectate</h3>
+          <h3>Dispozitive Conectate</h3>
           <p>8</p>
         </div>
       </div>
