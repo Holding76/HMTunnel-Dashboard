@@ -2,53 +2,72 @@
 <html lang="ro">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>HMTunnel - Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HMTunnel Dashboard - Home</title>
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
 </head>
 <body>
   <aside class="sidebar">
-    <h2 class="logo">HMTunnel</h2>
+    <h1 class="logo">HMTunnel</h1>
     <nav class="nav">
-      <a href="home.html" class="active">🏠 Acasă</a>
+      <a href="home.html" class="active">🏠 Home</a>
       <a href="dispozitive.html">📱 Dispozitive</a>
       <a href="clienti.html">👥 Clienți</a>
-      <a href="servere.html">🖥️ Servere</a>
-      <a href="aplicatie.html">📲 Aplicație</a>
       <a href="configurari.html">⚙️ Configurări</a>
+      <a href="servere.html">🖥 Servere</a>
+      <a href="aplicatie.html">📲 Aplicație</a>
       <a href="profil.html">👤 Profil</a>
       <a href="administrare.html">🧩 Administrare</a>
       <a href="delogare.html">🚪 Delogare</a>
-      <div class="bottom-controls">
-        <select class="language-select" onchange="changeLanguage(this.value)">
-          <option value="ro">Română</option>
-          <option value="en">English</option>
-        </select>
-      </div>
     </nav>
+    <div class="sidebar-bottom">
+      <select class="language-select" onchange="changeLanguage(this.value)">
+        <option value="ro">Română</option>
+        <option value="en">English</option>
+      </select>
+    </div>
   </aside>
 
   <main class="content">
     <header class="topbar">
-      <span class="user-label">Salut, Admin</span>
+      <span class="user-label">Admin</span>
+      <button class="logout-btn">Delogare</button>
     </header>
 
-    <section class="section">
-      <h2 class="section-title">📋 Informații cont</h2>
-      <div class="card-grid">
-        <div class="card"><h3>📅 Data Creării</h3><p>10 Iulie 2025</p></div>
-        <div class="card"><h3>🔄 Ultima Actualizare</h3><p>5 Iulie 2025</p></div>
-        <div class="card"><h3>⏳ Expirare</h3><p>10 August 2025 (30 zile)</p></div>
-      </div>
-    </section>
+    <section class="section home-section">
+      <h2 class="section-title">Informații cont</h2>
 
-    <section class="section">
-      <h2 class="section-title">📊 Statistici de sistem</h2>
-      <div class="card-grid">
-        <div class="card"><h3>🗂️ Configurații</h3><p>15</p></div>
-        <div class="card"><h3>📁 Categorii</h3><p>6</p></div>
-        <div class="card"><h3>📱 Dispozitive conectate</h3><p>8</p></div>
+      <div class="cards-group">
+        <div class="card info-card">
+          <h3>Data creare cont</h3>
+          <p>01-07-2025</p>
+        </div>
+        <div class="card info-card">
+          <h3>Ultima actualizare</h3>
+          <p>04-07-2025</p>
+        </div>
+        <div class="card info-card">
+          <h3>Data expirare</h3>
+          <p>31-12-2025 (135 zile)</p>
+        </div>
+      </div>
+
+      <h2 class="section-title">Statistici sistem</h2>
+
+      <div class="cards-group">
+        <div class="card stats-card">
+          <h3>Configurări</h3>
+          <p>54</p>
+        </div>
+        <div class="card stats-card">
+          <h3>Categorii</h3>
+          <p>12</p>
+        </div>
+        <div class="card stats-card">
+          <h3>Dispozitive conectate</h3>
+          <p>27</p>
+        </div>
       </div>
     </section>
   </main>
