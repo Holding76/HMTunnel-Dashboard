@@ -2,20 +2,97 @@
 <html lang="ro">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>HMTunnel - Dispozitive</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dispozitive - HMTunnel</title>
   <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
 </head>
 <body>
-  <div class="sidebar">
-    <a href="home.html">Acasă</a>
-    <a href="dispozitive.html" class="active">Dispozitive</a>
-    <!-- Adaugă celelalte linkuri când dorești -->
-  </div>
-  <div class="main-content">
-    <h1>Dispozitive</h1>
-    <button>+ Adaugă dispozitiv</button>
-    <p>Aici vor fi listate dispozitivele și opțiunile pentru ele.</p>
-  </div>
+  <aside class="sidebar">
+    <h2 class="logo">HMTunnel</h2>
+    <nav class="nav">
+      <a href="home.html">🏠 Acasă</a>
+      <a href="dispozitive.html" class="active">📱 Dispozitive</a>
+      <a href="clienti.html">👥 Clienți</a>
+      <a href="servere.html">🖥️ Servere</a>
+      <a href="aplicatie.html">📲 Aplicație</a>
+      <a href="configurari.html">⚙️ Configurări</a>
+      <a href="profil.html">👤 Profil</a>
+      <a href="administrare.html">🧩 Administrare</a>
+      <a href="delogare.html">🚪 Delogare</a>
+      <div class="bottom-controls">
+        <select class="language-select" onchange="changeLanguage(this.value)">
+          <option value="ro">Română</option>
+          <option value="en">English</option>
+        </select>
+      </div>
+    </nav>
+  </aside>
+
+  <main class="content">
+    <header class="topbar">
+      <span class="user-label">Salut, Admin</span>
+    </header>
+
+    <section class="section">
+      <h2 class="section-title">📱 Dispozitive înregistrate</h2>
+      <button class="add-button">➕ Adaugă dispozitiv</button>
+
+      <div class="card-grid">
+
+        <!-- Dispozitiv 1 -->
+        <div class="card">
+          <h3>👤 User: HM-001</h3>
+          <p>🔑 Parolă: K7gR4mYp2xNcWd</p>
+          <p>🧬 UUID: 550e8400-e29b-41d4-a716-446655440000</p>
+          <p>📍 Locație: București, RO</p>
+          <p>📶 MAC: 00:1A:2B:3C:4D:5E</p>
+          <p>📱 Dispozitiv: Samsung Galaxy A52</p>
+          <p class="status online">🟢 Activ</p>
+          <div class="card-buttons">
+            <button class="danger">Delogare</button>
+            <button>Mesaj</button>
+            <button>Editare</button>
+            <button class="danger">Ștergere</button>
+          </div>
+        </div>
+
+        <!-- Dispozitiv 2 -->
+        <div class="card">
+          <h3>👤 User: HM-002</h3>
+          <p>🔑 Parolă: B2tYzXkLpWc38H</p>
+          <p>🧬 UUID: 550e8400-e29b-41d4-a716-446655440001</p>
+          <p>📍 Locație: Cluj-Napoca, RO</p>
+          <p>📶 MAC: 11:22:33:44:55:66</p>
+          <p>📱 Dispozitiv: Huawei P30</p>
+          <p class="status offline">🔴 Offline</p>
+          <div class="card-buttons">
+            <button class="success">Activează</button>
+            <button>Mesaj</button>
+            <button>Editare</button>
+            <button class="danger">Ștergere</button>
+          </div>
+        </div>
+
+        <!-- Dispozitiv 3 -->
+        <div class="card">
+          <h3>👤 User: HM-003</h3>
+          <p>🔑 Parolă: M4nZx3TqLoCvB1</p>
+          <p>🧬 UUID: 550e8400-e29b-41d4-a716-446655440002</p>
+          <p>📍 Locație: Iași, RO</p>
+          <p>📶 MAC: AA:BB:CC:DD:EE:FF</p>
+          <p>📱 Dispozitiv: Xiaomi Redmi Note 10</p>
+          <p class="status online">🟢 Activ</p>
+          <div class="card-buttons">
+            <button class="danger">Delogare</button>
+            <button>Mesaj</button>
+            <button>Editare</button>
+            <button class="danger">Ștergere</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
 </body>
 </html>
