@@ -1,9 +1,7 @@
-function changeLanguage(lang) {
-  // Logica schimbare limba (exemplu simplu)
-  alert('Schimbă limba în: ' + lang);
+function adaugaDispozitiv() {
+  alert("Funcția de adăugare dispozitiv nu este implementată încă.");
 }
 
-document.querySelector('.logout-btn').addEventListener('click', () => {
-  alert('Delogare...');
-  // window.location.href = 'login.html'; // redirecționare după delogare
-});
+function changeLanguage(lang) {
+  alert("Limba selectată: " + lang + " (funcția este în lucru)");
+}
