@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>HMTunnel Dashboard - Dispozitive</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HMTunnel - Dispozitive</title>
+  <link rel="stylesheet" href="style.css">
   <script defer src="script.js"></script>
 </head>
 <body>
@@ -39,15 +39,15 @@
       <button class="add-device-button" onclick="toggleForm()">+ Adaugă dispozitiv</button>
 
       <div id="formContainer" style="display:none; margin-top: 20px; background-color: #1f1f1f; padding: 20px; border-radius: 10px;">
-        <input type="text" id="userInput" placeholder="User" class="form-input" /><br /><br />
-        <input type="text" id="passInput" placeholder="Parolă" class="form-input" /><br /><br />
-        <input type="text" id="uuidInput" placeholder="UUID" class="form-input" /><br /><br />
-        <input type="text" id="macInput" placeholder="MAC" class="form-input" /><br /><br />
+        <input type="text" id="userInput" placeholder="User" class="form-input"><br><br>
+        <input type="text" id="passInput" placeholder="Parolă" class="form-input"><br><br>
+        <input type="text" id="uuidInput" placeholder="UUID" class="form-input"><br><br>
+        <input type="text" id="macInput" placeholder="MAC" class="form-input"><br><br>
         <button onclick="creareDispozitiv()" class="add-device-button">Creare Dispozitiv</button>
       </div>
 
       <div class="device-grid" id="deviceGrid">
-        <!-- Dispozitivele vor fi afișate aici -->
+        <!-- Cardurile dispozitivelor vor fi generate aici din JS -->
       </div>
     </section>
   </main>
