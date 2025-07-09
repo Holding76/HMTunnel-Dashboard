@@ -36,20 +36,33 @@
 
     <section class="section">
       <h2 class="section-title">Dispozitive conectate</h2>
+      <button class="add-device-button" onclick="adaugaDispozitiv()">+ Adaugă dispozitiv</button>
+
       <div class="device-grid">
         <div class="device-card">
-          <h3>Huawei E5577</h3>
-          <p>Status: <span class="online">Activ</span></p>
-          <p>IP: 192.168.1.1</p>
-          <p>Configurație: V2Ray - UDP + TCP</p>
+          <div class="user-header online">user_test1</div>
+          <p>Configurație: SSH - TCP - Port 443</p>
+          <p>Operator: Digi.Mobil</p>
+          <p>Dispozitiv: TP-Link M7650</p>
+          <div class="card-buttons">
+            <button class="success">Activ</button>
+            <button class="danger">Șterge</button>
+            <button>Detalii</button>
+          </div>
         </div>
+
         <div class="device-card">
-          <h3>TP-Link M7350</h3>
-          <p>Status: <span class="offline">Deconectat</span></p>
-          <p>IP: 192.168.8.100</p>
-          <p>Configurație: SSH Tunnel</p>
+          <div class="user-header offline">user_test2</div>
+          <p>Configurație: V2Ray - UDP + TCP</p>
+          <p>Operator: Vodafone.RO</p>
+          <p>Dispozitiv: Huawei E5785</p>
+          <div class="card-buttons">
+            <button class="success">Activ</button>
+            <button class="danger">Șterge</button>
+            <button>Detalii</button>
+          </div>
         </div>
-        <!-- Adaugă mai multe carduri după model -->
+        <!-- Alte carduri -->
       </div>
     </section>
   </main>
