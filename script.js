@@ -1,7 +1,7 @@
 function adaugaDispozitiv() {
-  alert("Funcția de adăugare dispozitiv nu este implementată încă.");
+  alert("Funcționalitatea de adăugare dispozitiv va fi implementată.");
 }
 
 function changeLanguage(lang) {
-  alert("Limba selectată: " + lang + " (funcția este în lucru)");
+  alert("Ai selectat limba: " + lang);
 }
