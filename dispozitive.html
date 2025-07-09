@@ -36,33 +36,18 @@
 
     <section class="section">
       <h2 class="section-title">Dispozitive conectate</h2>
-      <button class="add-device-button" onclick="adaugaDispozitiv()">+ Adaugă dispozitiv</button>
+      <button class="add-device-button" onclick="toggleForm()">+ Adaugă dispozitiv</button>
 
-      <div class="device-grid">
-        <div class="device-card">
-          <div class="user-header online">HM-001</div>
-          <p>MAC: 34:A1:B2:77:21:E4</p>
-          <p>Dispozitiv: ZTE MF971</p>
-          <div class="card-buttons">
-            <button class="success">Activ</button>
-            <button class="danger">Șterge</button>
-            <button>Detalii</button>
-          </div>
-        </div>
+      <div id="formContainer" style="display:none; margin-top: 20px; background-color: #1f1f1f; padding: 20px; border-radius: 10px;">
+        <input type="text" id="userInput" placeholder="User" class="form-input" /><br /><br />
+        <input type="text" id="passInput" placeholder="Parolă" class="form-input" /><br /><br />
+        <input type="text" id="uuidInput" placeholder="UUID" class="form-input" /><br /><br />
+        <input type="text" id="macInput" placeholder="MAC" class="form-input" /><br /><br />
+        <button onclick="creareDispozitiv()" class="add-device-button">Creare Dispozitiv</button>
+      </div>
 
-        <div class="device-card">
-          <div class="user-header offline">HM-002</div>
-          <p>MAC: A8:3E:F2:19:45:77</p>
-          <p>Dispozitiv: Alcatel LinkZone</p>
-          <div class="card-buttons">
-            <button class="success">Activ</button>
-            <button class="danger">Șterge</button>
-            <button>Detalii</button>
-          </div>
-        </div>
-
-        <!-- Poți adăuga mai multe carduri identic -->
-
+      <div class="device-grid" id="deviceGrid">
+        <!-- Dispozitivele vor fi afișate aici -->
       </div>
     </section>
   </main>
